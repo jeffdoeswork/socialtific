@@ -1,0 +1,584 @@
+/*Global*/
+.myButton{
+  font-weight:bold;
+  margin-bottom: 20px;
+  display:inline-block;
+}
+
+.bottomButton{
+  position:absolute;
+  bottom:0;
+  left: 15px;
+}
+
+.icon:hover{
+  cursor:pointer
+}
+
+.hidden{
+  visibility: hidden;
+}
+
+.mainScreen{
+  padding-top:275px;
+}
+
+.toRight{
+  padding-left:200px;
+}
+
+.innerMain{
+  position:relative;
+  z-index:2;  
+}
+
+.avatar{
+  height:50px;
+  width:50px;
+  border-radius:50%;
+}
+.miniAvatar{
+  height:20px;
+  width:20px;
+  border-radius:50%;
+}
+
+input[type="file"]{
+  display:none;
+}
+
+.fileLabel{
+  cursor: pointer;
+}
+
+.defaultFlag{
+  height:100px;
+}
+.defaultFlag.tempImage{
+  border-radius: 50%;
+}
+.required{
+  color:red;
+}
+.p-100{
+  padding-top:100px;
+}
+
+.artifactDiv{
+  display:flex;
+  padding:10px;
+  border-radius:10px;
+  flex-wrap:wrap;
+}
+
+.likeSymbol{
+  display:inline-flex;
+  justify-content: flex-end;
+  cursor:pointer;
+}
+.success{
+  color:rgb(1, 223, 1);
+}
+
+.weightGroup{
+  display:inline;
+}
+.fauxDropHeader{
+  border: 1px solid grey;
+  border-radius:1px;
+  height:1.7em;
+  position:relative;
+  display:flex;
+  flex-wrap: nowrap;
+  overflow: hidden;
+}
+.fauxHeaderText{
+  word-break: break-all;
+}
+.fauxDrop{
+  background-color: white;
+  position:absolute;
+  list-style: none;
+  padding-left:2px;
+  border:1px solid grey;
+  border-radius: 1px;
+  box-shadow: 0px 0px 4px 2px lightgrey;
+}
+
+.fauxDropItem:hover{
+background-color: rgb(0, 132, 255);
+color:white;
+}
+.fauxDropData{
+  display:inline;
+  padding:0;
+}
+
+.dropIcon{
+  position:absolute;
+  right:0;
+}
+/*End global
+======*/
+
+/*Alerts
+=========*/
+
+.alerts{
+  position:fixed;
+  text-align: center;
+  width: 100%;
+  z-index:99999;
+}
+
+.alerts p{
+  width:25%;
+  margin: 0 auto;
+  animation: fadeOut forwards 10s linear;
+}
+@keyframes fadeOut{
+   0% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 1;
+  }
+  80%{
+    opacity: .5;
+
+  }
+  100%{
+    opacity: 0;
+
+  }
+}
+
+
+/*Side links
+============*/
+.myNavLink{
+  color:white;
+  text-decoration: none;
+  display:block;
+}
+
+
+/*Header 
+=================*/
+.previewModal{
+  position: fixed;
+    z-index: 9999999;
+    width: 100%;
+    height: 100vh;
+    background-color: rgba(220, 220, 220, 0.795);
+    left:0;
+}
+
+.previewModalText{
+  margin-left:15px;
+}
+
+.modalBody{
+   display:flex;
+   height:100%;
+   justify-content:center;
+}
+
+.innerModalBody{
+  background-color:white;
+  align-self:center;
+  padding:20px;
+  border:1px solid grey;
+  border-radius:10px;
+  width:65%;
+}
+/*End Header*/
+
+/*Social Method Screen
+====================*/
+
+.clickable:hover{
+  color: black;
+}
+
+
+.sliderWrapper{
+  white-space: nowrap;
+  padding:5px 0px;
+}
+
+.selectorWrapper{
+  width: 45%;
+  margin: 0 auto;
+  overflow: hidden;
+  white-space: nowrap;
+}
+.slideShow{
+  overflow:hidden;
+  width:300px;
+  margin:0 auto;
+}
+.slide{
+  display:inline-block;
+  margin:0 auto;
+  border:1px solid lightgrey;
+  box-shadow:0px 3px 5px grey;
+  width:100%;
+  text-align:center;
+}
+
+.selected{
+  background-color: rgb(31, 190, 10);
+  color:white;
+  font-weight: bold;
+}
+
+.slideSelector{
+  font-weight:bold;
+}
+.slideSelector:hover{
+  cursor:pointer;
+}
+
+
+.show{
+  display: flex;
+}
+
+.hide{
+  display: none;
+}
+.submitTitle{
+  top: 15px;
+  position: relative;
+  left: 5px;
+}
+
+.border{
+  border:1px solid lightgrey;
+}
+
+.stickyTop{
+  position: fixed;
+  right:0; 
+  left:0;
+  top:0px; 
+  background-color:white;
+  z-index:999999;
+}
+
+.circle{
+  display: flex;
+  position:relative;
+  justify-content: center;
+  align-items: center;
+  width: 15px;
+  height:15px;
+  background-color:#ccc;
+  border-radius: 50%;
+  text-align:center;
+  z-index:10;
+}
+
+.circle.completed{
+  background-color: #4bb543;
+}
+
+.stepperContainer{
+  display:fixed;
+  flex-direction: column;
+  text-align: center;
+}
+
+
+.stepperHeaderItem{
+  display: flex;
+  position: relative;
+  flex:1;
+  height: 350px;
+  font-weight:bold;
+}
+.stepperHeaderItem.completed::before{
+    position: absolute;
+    content: '';
+    border-left: 2px solid #4bb543;
+    left: 5%;
+    z-index: 3;
+    height:100%;
+
+  }
+
+.stepperHeaderItem::after {
+  position: absolute;
+  content: '';
+  border-left: 2px solid #ccc;
+  height:100%;
+  left: 5%;
+  z-index: 2;
+}
+
+.stepperHeaderItem:last-child::after {
+  content: none;
+}
+
+.middleCol{
+  text-align: center;
+}
+
+.selectedForm{
+  outline:0;
+  border-radius: 8px;
+  box-shadow: 0px 0px 20px rgba(0, 98, 255, 0.76);
+}
+
+.fakeLink{
+  font-weight:bold;
+  font-size:1.2em;
+  color:rgb(93, 150, 243);
+  text-decoration:underline;
+  display: inline-block;
+  margin-right:10px;
+}
+
+.fakeLink:hover{
+  cursor:pointer;
+}
+
+
+
+.preview{
+  font-weight:bold;
+  font-style:italic;
+  margin: 0;
+}
+.notSelectedPreview{
+  color:red;
+
+}
+.selectedPreview{
+  color:green;
+}
+
+.miniCircle{
+  display:inline-block;
+}
+
+.borrowSelected{
+  background-color:#ffcc02;
+  color:black;
+}
+
+.arrows{
+  width:20%;
+  align-self: center;
+  opacity:1
+}
+.arrows:hover{
+  cursor: pointer;
+}
+.fa-long-arrow-alt-left{
+  text-align:right
+}
+
+.hiddenArrow{
+  opacity: 0;
+}
+.hiddenArrow:hover{
+  cursor:auto;
+}
+.f-2{
+  font-size:2em;
+}
+/*End*/
+
+/*Organization Screen
+======================*/
+
+.organizationDiv{
+  text-align:center;
+  border-radius: 15px;
+  box-shadow: 0px 0px 12px 0px rgb(196, 195, 195);
+  width:200px;
+  padding:20px;
+}
+
+.organizationDiv p{
+  font-weight:bold;
+}
+.organizationDiv:hover{
+  cursor:pointer;
+    box-shadow: 0px 2px 15px 2px rgb(206, 206, 206);
+    transform: translateY(-3px);
+    transition: all .5s;
+}
+
+.userSearchSection{
+  margin-top:10px;
+  width: 205px;
+}
+.userSearchSection input{
+  padding:0px 10px;
+}
+.userListWrapper{
+  border-radius: 5px;
+  border:1px solid grey;
+  border-top:none;
+  padding:10px;
+}
+.userResult{
+  margin: 0;
+  padding:5px 0;
+  border-bottom:1px solid grey;
+}
+.userResult:last-child{
+  border:none;
+}
+
+.userResult:hover{
+  cursor:pointer;
+  background-color:lightgrey;
+}
+
+.organizationWrapper{
+  display:flex;
+  column-gap: 25px;
+}
+/*End organization Lisdt/Create*/
+
+/* Org/Group detail screen
+=================*/
+
+.orgDetailBanner{
+  margin: 20px 0;
+  border:2px solid black;
+  border-radius:5px;
+  display:flex;
+  justify-content:space-between;
+  flex-wrap:wrap;
+  height:200px;
+}
+.orgDetailBanner div{
+  display:flex;
+  align-self:flex-end;
+}
+
+.orgDetailBanner p{
+  font-size: 1.3em;
+  font-weight:bold;
+}
+
+.bio{
+  text-align:center;
+}
+
+.orgDetailBanner .bio{
+  width:200px;
+}
+.bannerUpload{
+  width:100%;
+  justify-content:center;
+  align-self:auto !important;
+}
+.orgDetailScreen{
+  display:flex;
+  justify-content:space-between;
+  gap:20px;
+  flex-wrap:wrap;
+}
+
+
+.artifactFeed{
+  flex: 1 0 auto
+}
+
+.groupSideBar{
+  border:1px solid black;
+  border-radius:10px;
+  width:30%;
+}
+.orgMemberList{
+  margin-top:60px;
+}
+.orgMemberList p{
+  font-weight:bold;
+}
+
+.createModal{
+  text-align: center;
+  width:50%;
+}
+
+/*ProfileMyScreen
+==================*/
+.profileMyScreen{
+  padding-top:50px;
+}
+.profileSectionTop{
+  display:flex;
+}
+
+.profileSectionTop div{
+  width:50%;
+}
+.imageGroupWrapper{
+  display:flex;
+  justify-content:center;
+  width:100%;
+}
+.mainAvatar{
+  height:100px;
+  width:100px;
+  border-radius:50%;
+}
+
+.userMeta{
+  text-align:center;
+}
+
+.uploadLabel{
+  border-radius: 50%;
+  background-color:lightgrey;
+  width:30px;
+  height:30px;
+  display:flex;
+  justify-content: center;
+  align-items:center;
+  align-self:flex-end;
+}
+
+.upload{
+  cursor:pointer;
+}
+
+.profileSectionBottom{
+  display:flex;
+  gap:25px;
+}
+
+.follower{
+  background-color: #ccc;
+}
+
+/*End*/
+
+/*Artifact Feed
+===============*/
+.artifactFeedDiv{
+  margin-bottom:10px;
+}
+.artifactDescription{
+  width:100%;
+  text-align: center;
+}
+
+.artifactHeader{
+  display: flex;
+  justify-content: space-between;
+  width:100%;
+}
+.artifactHeader *{
+  flex: 0 0 30%;
+  display:inline-block;
+}
+
+
